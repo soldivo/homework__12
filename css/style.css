@@ -1,0 +1,230 @@
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* SUN */
+
+.sun {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 100%;
+  background-color: yellow;
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: sun 15s linear infinite alternate forwards;
+}
+
+.sun:hover {
+  background-color: red;
+  animation-play-state: paused;
+  transform: rotate(1080deg);
+  transition: all 15s;
+}
+
+.sun__rays {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -58px;
+  left: -60px;
+}
+
+.sun__eyes {
+  position: absolute;
+  width: 45px;
+  height: auto;
+  left: 17px;
+}
+
+.sun__mouth {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  left: 25px;
+  top: 30px;
+}
+
+.birds {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  left: 205px;
+  top: 100px;
+}
+
+.birds:active {
+  transform: translate(900px);
+  transition: all 6s;
+}
+
+/* HOUSE */
+
+.house {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: 200px;
+  left: 800px;
+}
+
+.boom {
+  position: absolute;
+  top: 300px;
+  left: 800px;
+  width: 300px;
+  height: 300px;
+  z-index: 100;
+  transition: all 5s;
+  display: none;
+}
+
+.boom__a {
+  animation: boom 5s linear infinite alternate forwards;
+}
+
+/* CAR */
+
+.car {
+  position: relative;
+  width: 120px;
+  height: 70px;
+  top: 150px;
+  left: 330px;
+}
+
+.car__a {
+  animation: car 3s linear alternate forwards;
+}
+
+/* CANNONE */
+
+.cannon {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  top: 50px;
+  left: 200px;
+  transition: all 3s;
+  z-index: 20;
+}
+
+.cannon__core {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 65px;
+  left: 305px;
+  z-index: 10;
+}
+
+.core {
+  animation: core 3s linear alternate forwards;
+}
+
+.cannon__fire {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 80px;
+  left: 215px;
+  z-index: 30;
+}
+
+/* KEYFRAMES */
+
+@keyframes sun {
+  0% {
+    top: 550px;
+    left: 0;
+  }
+
+  17% {
+    top: 250px;
+    left: 240px;
+  }
+
+  34% {
+    top: 120px;
+    left: 480px;
+  }
+
+  51% {
+    top: 100px;
+    left: 720px;
+  }
+
+  68% {
+    top: 120px;
+    left: 960px;
+  }
+
+  85% {
+    top: 250px;
+    left: 1200px;
+  }
+
+  100% {
+    top: 550px;
+    left: 1380px;
+  }
+}
+
+@keyframes core {
+  0% {
+    top: 65px;
+    left: 305px;
+  }
+
+  50% {
+    top: 10px;
+    left: 500px;
+  }
+
+  100% {
+    top: -30px;
+    left: 700px;
+  }
+}
+
+@keyframes car {
+  0% {
+    top: 150px;
+    left: 330px;
+  }
+
+  50% {
+    top: 150px;
+    left: 600px;
+    transform: scale(0.8);
+  }
+
+  100% {
+    top: 150px;
+    left: 800px;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes boom {
+  0% {
+    transform: skew(15deg, 25deg);
+  }
+
+  100% {
+    transform: skew(25deg, 15deg);
+  }
+}
